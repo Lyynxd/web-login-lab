@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Login Lab</title>
+</head>
+<body>
+
+<h1>Login System (Learning)</h1>
+
+<input id="username" placeholder="username">
+<input id="password" placeholder="password" type="password">
+
+<button onclick="login()">Login</button>
+
+<p id="output"></p>
+
+<script>
+function login() {
+    let user = document.getElementById("username").value;
+    let pass = document.getElementById("password").value;
+
+    
+    let database = {
+        "admin": "1234",
+        "alex": "0000"
+    };
+
+    if (database[user] === pass) {
+        document.getElementById("output").innerText = "Login success!";
+    } else {
+        document.getElementById("output").innerText = "Login failed!";
+    }
+}
+</script>
+
+</body>
+</html>
