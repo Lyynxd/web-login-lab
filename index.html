@@ -1,12 +1,10 @@
-<h1>Login p</h1>
+function login() {
+    let user = document.getElementById("user").value;
+    let pass = document.getElementById("pass").value;
 
-
-<input id="user" placeholder="username">
-<input id="pass" type="password" placeholder="password">
-
-
-
-<button onclick"login"()">Login</button>
-
-
-<p id="out"></p>
+    if (user == "admin" && pass == "1234") {
+        document.getElementById("out").innerText = "OK";
+    } else {
+        document.getElementById("out").innerText = "NO";
+    }
+}
